@@ -1,0 +1,133 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+	background: #000;
+	overflow: hidden;
+	font-family: Arial;
+}
+#page {
+	position: relative;
+	width: 1290px;
+	height: 100%;
+	margin: 0 auto;
+}
+#content { height: 100%; }
+#header { 
+	position: absolute;
+	top: 5px;
+	left: 140px;
+}
+
+#language-selector {
+	position: absolute; 
+	left: 43px;
+	top: 20px;
+	display: block; 
+	font-size: 14px;
+	font-weight: bold;
+	color: #f66029;
+}
+#menu { color: #fff; }
+
+#page-bg { 
+	position: absolute;
+	top: 80px;
+
+	z-index: -1000;
+}
+
+#menu {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+#menu .menu-item { 
+	float: left;
+
+	width: 120px;
+	height: 175px;
+
+	text-align: center;
+	vertical-align: middle;
+}
+#menu .menu-item.logo {
+	width: 275px;
+}
+#menu .menu-item.last { width: 150px; }
+#menu .menu-item a.no-border { border: none; }
+#menu .menu-item a { 
+	display: block;
+	font-size: 18px;
+	text-transform: uppercase;
+	border-right: 1px solid #616161;
+	color: #fff;
+	text-decoration: none;
+	margin-top: 75px;
+}
+#menu .menu-item.logo a { 
+	width: 275px;
+	height: 175px;
+	border: none;
+	background: url("logo.png") no-repeat;
+	margin: 0px;
+}
+
+#text-block {
+	position: absolute;
+	top: 200px;
+	left: 130px;
+
+	width: 270px;
+	color: #fff;
+}
+#text-block h1 {
+	font-size: 24px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #d7c494;
+}
+#text-block p {
+	padding: 5px 0px;
+	font: 14px/18px Arial;
+	font-weight: bold;
+
+	border-bottom: 1px solid #342f26;
+	border-top: 1px solid #342f26;
+}
+
+#social-links { 
+	position: absolute;
+	top: 500px;
+	right: 150px;
+
+	width: 100px;
+	height: 40px;
+}
+
+#social-links a { display: inline-block; width: 35px; height: 35px; background: url("social.png") no-repeat; }
+#social-links .fb {
+	background-position: 0 0;
+}
+#social-links .tw {
+	background-position: 0 -35px;
+}
+
+#copyright {
+	display: block;
+	position: absolute;
+
+	top: 550px;
+	right: 180px;
+
+	color: #7e7e7e;
+	font-size: 10px;
+}
+
+#tweet-block { 
+	width: 275px;
+	height: 100px;
+	overflow-y: hidden;
+}
