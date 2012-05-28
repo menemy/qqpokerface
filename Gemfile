@@ -5,8 +5,15 @@ gem 'rails', '3.2.2'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
+gem "heroku"
+
 gem 'sqlite3', :group => :development
 gem 'pg', :group => :production
+
+group :production do
+gem "thin", "1.3.1"
+gem "eventmachine", "1.0.0.beta.4.1"
+end
 
 # Gems used only for assets and not required
 # in production environments by default.
