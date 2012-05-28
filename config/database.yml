@@ -19,9 +19,14 @@ test:
   timeout: 5000
 
 production:
-  adapter: postgresql
-  encoding: unicode
-  database: oleksiik_poker
+  adapter: sqlite3
+  database: db/development.sqlite3
   pool: 5
-  username: oleksiik_root
-  password: otiuqsom
+  timeout: 5000
+
+#adapter: postgresql
+#encoding: unicode
+#database: oleksiik_poker
+#pool: 5
+#username: oleksiik_root
+#password: otiuqsom
