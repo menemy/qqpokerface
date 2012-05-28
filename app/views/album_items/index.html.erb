@@ -1,0 +1,21 @@
+<h1>Listing album_items</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @album_items.each do |album_item| %>
+  <tr>
+    <td><%= link_to 'Show', album_item %></td>
+    <td><%= link_to 'Edit', edit_album_item_path(album_item) %></td>
+    <td><%= link_to 'Destroy', album_item, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Album item', new_album_album_item_path %>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Qqstudy</title>
+  <title>Oleksii Kovalchuk Website</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
 
@@ -9,7 +9,35 @@
 </head>
 <body>
 
-<%= yield %>
+  <div id="page">
+    <div id="header">
+      <a id="language-selector" href="/ru/">Rus</a>
+
+      <ul id="menu">
+        <li class="menu-item">
+          <%= link_to t('menu.bio'), { :controller => "home", :action => "bio", :locale => I18n.locale } %>
+        </li>
+        <li class="menu-item">
+          <%= link_to t('menu.gallery'), { :controller => "albums", :action => "index", :locale => I18n.locale } %>
+        <li class="menu-item">
+          <%= link_to t('menu.news'), { :controller => "posts", :action => "index", :locale => I18n.locale }, :class => "no-border" %>
+        <li class="menu-item logo">
+          <%= link_to "", { :controller => "home", :action => "index", :locale => I18n.locale }, :class => "no-border" %>
+        <li class="menu-item">
+          <%= link_to t('menu.dates'), { :controller => "home", :action => "index", :locale => I18n.locale } %>
+        </li>
+        <li class="menu-item">
+          <%= link_to t('menu.press'), { :controller => "home", :action => "index", :locale => I18n.locale } %>
+        </li>
+        <li class="menu-item last">
+          <%= link_to t('menu.contacts'), { :controller => "home", :action => "index", :locale => I18n.locale }, :class => "no-border" %>
+        </li>
+      </ul>
+    </div>
+
+    <%= yield %>
+
+  </div>
 
 </body>
 </html>

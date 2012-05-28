@@ -1,8 +1,18 @@
-Qqstudy::Application.routes.draw do
-  root :to => 'home#index'
+Qqstudy::Application.routes.draw do  
+    root :to => 'home#index'
+    match '/bio' => 'home#bio'
 
-  get "home/index"
+    resources :posts
+    resources :albums
+    
+  scope "(:locale)", :locale => /en|ru/ do
+    root :to => 'home#index'
+    match '/bio' => 'home#bio'
 
+    resources :posts
+    resources :albums
+  end
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

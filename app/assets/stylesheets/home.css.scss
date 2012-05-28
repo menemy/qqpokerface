@@ -1,139 +1,129 @@
-// Place all the styles related to the home controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
-body {
-	background: #000;
-	overflow: hidden;
-	font-family: Arial;
-}
-#page {
-	position: relative;
-	width: 1290px;
-	height: 100%;
-	margin: 0 auto;
-}
-#content { height: 100%; }
-#header { 
-	position: absolute;
-	top: 25px;
-	left: 140px;
-}
-
-#language-selector {
-	position: absolute; 
-	left: 43px;
-	top: 20px;
-	display: block; 
-	font-size: 14px;
-	font-weight: bold;
-	color: #f66029;
-}
-#menu { color: #fff; }
-
-#page-bg { 
-	position: absolute;
-	top: 80px;
-
-	z-index: -1000;
-
-	display: none;
-}
-
-#menu {
-	list-style: none;
-	margin: 0px;
-	padding: 0px;
-}
-
-#menu .menu-item { 
-	float: left;
-
-	width: 120px;
-	height: 175px;
-
-	text-align: center;
-	vertical-align: middle;
-}
-#menu .menu-item.logo {
-	width: 275px;
-}
-#menu .menu-item.last { width: 150px; }
-#menu .menu-item a.no-border { border: none; }
-#menu .menu-item a { 
-	display: block;
-	font-size: 18px;
-	text-transform: uppercase;
-	border-right: 1px solid #616161;
-	color: #fff;
-	text-decoration: none;
-	margin-top: 75px;
-}
-#menu .menu-item.logo a { 
-	width: 275px;
-	height: 175px;
-	border: none;
-	background: url("logo.png") no-repeat;
-	margin: 0px;
-}
-
-#text-block {
+.index-block .text-block {
 	position: absolute;
 	top: 200px;
-	left: 130px;
+	left: 135px;
 
 	width: 270px;
-	color: #fff;
-
-	display: none;
+	color: #fff;	
 }
-#text-block h1 {
+.index-block .text-block h1 {
+	font-family: 'OfficinaSerifCRegularBook';
 	font-size: 24px;
 	font-weight: bold;
 	text-transform: uppercase;
 	color: #d7c494;
 }
-#text-block p {
+.index-block .text-block p {
 	padding: 5px 0px;
-	font: 14px/18px Arial;
+	font: 13px/16px 'OfficinaSerifCRegularBook';
 	font-weight: bold;
 
 	border-bottom: 1px solid #342f26;
 	border-top: 1px solid #342f26;
 }
 
-#social-links { 
+.index-block .social-links { 
 	position: absolute;
-	top: 500px;
+	top: 595px;
 	right: 150px;
 
 	width: 100px;
 	height: 40px;
 }
 
-#social-links a { display: inline-block; width: 35px; height: 35px; background: url("social.png") no-repeat; }
-#social-links .fb {
+.index-block .social-links a { display: inline-block; width: 35px; height: 35px; background: url("social.png") no-repeat; }
+.index-block .social-links .fb {
 	background-position: 0 0;
 }
-#social-links .tw {
+.index-block .social-links .tw {
 	background-position: 0 -35px;
 }
 
-#copyright {
+.index-block .copyright {
 	display: block;
 	position: absolute;
 
-	top: 550px;
+	top: 640px;
 	right: 180px;
 
 	color: #7e7e7e;
 	font-size: 10px;
 }
 
-#tweet-block { 
-	width: 275px;
-	height: 100px;
-	overflow-y: hidden;
+.index-block .tweet-block {
+	position: absolute;
+	top: 525px;
+	left: 160px;
 
-	display: none;
+	width: 325px;
+	height: 130px;
+	
+	overflow-y: hidden;
+	background: url(tweets-bg.png) no-repeat;
 }
+
+.index-block .follow-link {
+	display: block;
+	position: absolute;
+	top: 624px;
+	left: 217px;
+
+	font: 11px/13px 'OfficinaSerifCRegularBook';
+	color: #fff;
+	text-transform: uppercase;
+}
+
+.bio-block {
+	width: 975px;
+	margin: 0 auto;
+}
+.bio-block .page-bg { width: 975px; background: url(bio-bg.png) -40px 39px no-repeat; }
+
+.bio-block div.top-line,
+.bio-block div.bot-line {
+	width: 975px;
+	height: 2px;
+	background: url(wide-line.png) no-repeat;
+	margin: 45px 0px;
+}
+
+.page-block h1.title {  position: relative; color: #d7c494; margin: 30px 0 65px 0; height: 35px; }
+.page-block h1.title span { text-transform: uppercase; position: absolute; top: 0px; left: 32px; background-color: #000; padding: 0 15px; z-index: 100; }
+.page-block h1.title .border {
+	position: absolute;
+	bottom: 0px;
+	width: 975px;
+	height: 2px;
+	background: url(title-line.png) bottom right no-repeat;
+}
+.bio-block .text-block {
+	height: 550px;
+}
+.bio-block .text-block .foto {
+	display: block;
+	margin: 0 50px;
+	width: 255px;
+	height: 500px;
+	float: left;
+}
+.bio-block .text-block .foto img {
+	border: 1px solid #616161;
+}
+
+.bio-block .text-block .t {
+	color: #d7c494;
+	font-family: 'OfficinaSerifCRegularBookItalic', Verdana;
+	font-style: italic;
+}
+.bio-block div.at-line {
+	height: 1px;
+	background: url(short-line.png) top right no-repeat;
+	margin: 20px 0;
+}
+.bio-block .text-block .col {
+	width: 300px;
+	float: left;
+	font: 12px/18px Verdana;
+	color: #979797;
+}
+.bio-block .text-block .fcol { margin-right: 10px; }

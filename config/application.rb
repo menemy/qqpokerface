@@ -31,7 +31,8 @@ module Qqstudy
 
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
-    # config.i18n.default_locale = :de
+    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}')]
+    config.i18n.default_locale = :en
 
     # Configure the default encoding used in templates for Ruby 1.9.
     config.encoding = "utf-8"
@@ -52,7 +53,8 @@ module Qqstudy
 
     # Enable the asset pipeline
     config.assets.enabled = true
-    config.assets.paths << Rails.root.join("app", "assets", "flash")
+    config.assets.paths << Rails.root.join("app", "assets", "images/flash")
+    config.assets.paths << Rails.root.join("app", "assets", "images/fonts")
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'

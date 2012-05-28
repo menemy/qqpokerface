@@ -1,0 +1,84 @@
+@font-face {
+    font-family: 'OfficinaSansITCBold';
+    src: url('fonts/ufonts.com_officina-sans-itc-bold1-webfont.eot');
+    src: url('fonts/ufonts.com_officina-sans-itc-bold1-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/ufonts.com_officina-sans-itc-bold1-webfont.woff') format('woff'),
+         url('fonts/ufonts.com_officina-sans-itc-bold1-webfont.ttf') format('truetype'),
+         url('fonts/ufonts.com_officina-sans-itc-bold1-webfont.svg#OfficinaSansITCBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'OfficinaSansITCBoldItalic';
+    src: url('fonts/ufonts.com_officina-sans-itc-bold-italic1-webfont.eot');
+    src: url('fonts/ufonts.com_officina-sans-itc-bold-italic1-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/ufonts.com_officina-sans-itc-bold-italic1-webfont.woff') format('woff'),
+         url('fonts/ufonts.com_officina-sans-itc-bold-italic1-webfont.ttf') format('truetype'),
+         url('fonts/ufonts.com_officina-sans-itc-bold-italic1-webfont.svg#OfficinaSansITCBoldItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'OfficinaSansITCBook';
+    src: url('fonts/ufonts.com_officina-sans-itc-book1-webfont.eot');
+    src: url('fonts/ufonts.com_officina-sans-itc-book1-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/ufonts.com_officina-sans-itc-book1-webfont.woff') format('woff'),
+         url('fonts/ufonts.com_officina-sans-itc-book1-webfont.ttf') format('truetype'),
+         url('fonts/ufonts.com_officina-sans-itc-book1-webfont.svg#OfficinaSansITCBook') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'OfficinaSansITCBookItalic';
+    src: url('fonts/ufonts.com_officina-sans-itc-book-italic1-webfont.eot');
+    src: url('fonts/ufonts.com_officina-sans-itc-book-italic1-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/ufonts.com_officina-sans-itc-book-italic1-webfont.woff') format('woff'),
+         url('fonts/ufonts.com_officina-sans-itc-book-italic1-webfont.ttf') format('truetype'),
+         url('fonts/ufonts.com_officina-sans-itc-book-italic1-webfont.svg#OfficinaSansITCBookItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OfficinaSerifCRegularBold';
+    src: url('fonts/officinaserifc-bold-webfont.eot');
+    src: url('fonts/officinaserifc-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/officinaserifc-bold-webfont.woff') format('woff'),
+         url('fonts/officinaserifc-bold-webfont.ttf') format('truetype'),
+         url('fonts/officinaserifc-bold-webfont.svg#OfficinaSerifCRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OfficinaSerifCRegularBoldItalic';
+    src: url('fonts/officinaserifc-bolditalic-webfont.eot');
+    src: url('fonts/officinaserifc-bolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/officinaserifc-bolditalic-webfont.woff') format('woff'),
+         url('fonts/officinaserifc-bolditalic-webfont.ttf') format('truetype'),
+         url('fonts/officinaserifc-bolditalic-webfont.svg#OfficinaSerifCRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OfficinaSerifCRegularBook';
+    src: url('fonts/officinaserifc-book-webfont.eot');
+    src: url('fonts/officinaserifc-book-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/officinaserifc-book-webfont.woff') format('woff'),
+         url('fonts/officinaserifc-book-webfont.ttf') format('truetype'),
+         url('fonts/officinaserifc-book-webfont.svg#OfficinaSerifCRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OfficinaSerifCRegularBookItalic';
+    src: url('fonts/officinaserifc-bookitalic-webfont.eot');
+    src: url('fonts/officinaserifc-bookitalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/officinaserifc-bookitalic-webfont.woff') format('woff'),
+         url('fonts/officinaserifc-bookitalic-webfont.ttf') format('truetype'),
+         url('fonts/officinaserifc-bookitalic-webfont.svg#OfficinaSerifCRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

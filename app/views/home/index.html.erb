@@ -1,47 +1,24 @@
-<div id="page">
+<div class="index-block page-block">
 
-  <div id="content">
-    
-    <div id="header">
-      <a id="language-selector" href="/ru/">Rus</a>
+  <div class="text-block">
+    <h1>Oleksii Kovalchuk is not your typical 21 year-old poker pro though.</h1>
 
-      <ul id="menu">
-        <li class="menu-item"><a href="">Bio</a></li>
-        <li class="menu-item"><a href="">Gallery</a></li>
-        <li class="menu-item"><a class="no-border" href="">News</a></li>
-        
-        <li class="menu-item logo">
-        	<a class="no-border" href="/"></a>
-        </li>
-
-        <li class="menu-item"><a href="">Dates</a></li>
-        <li class="menu-item"><a href="">Press</a></li>
-        <li class="menu-item last"><a class="no-border" href="">Constacts</a></li>
-      </ul>
-    </div>
-
-	  <div id="text-block">
-	  	<h1>Oleksii Kovalchuk is not your typical 21 year-old poker pro though.</h1>
-
-	  	<p>First of all, Kolvalchuk is only the second Ukrainian in history to win a WSOP bracelet, joining the ranks of Eugene Katchalov. Second of all, he divides his time 50/50 between the online grind and the Kiev live poker scene, even though poker tournaments come through his area only four times a year or so.</p>
-	  </div>
-
-	  <div id="tweet-block" class="tweet"></div>
-
-	  <div id="social-links">
-	  	<a class="fb" href="#faacebook"></a>
-	  	<a class="tw" href="#twitter"></a>
-	  </div>
-
-	  <a href="" id="copyright">
-	  	Designed by Zabombey
-	  </a>
-
+    <p>First of all, Kolvalchuk is only the second Ukrainian in history to win a WSOP bracelet, joining the ranks of Eugene Katchalov. Second of all, he divides his time 50/50 between the online grind and the Kiev live poker scene, even though poker tournaments come through his area only four times a year or so.</p>
   </div>
 
-  <div id="page-bg" class="flash-obj">
+  <div class="tweet-block tweet"></div>
+  <a class="follow-link" href="#">follow oleksii on twitter</a>
+
+  <div class="social-links">
+    <a class="fb" href="#faacebook"></a>
+    <a class="tw" href="#twitter"></a>
+  </div>
+
+  <a href="#" class="copyright">Designed by Zabombey</a>
+
+  <div class="page-bg flash-obj">
     <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab" width="1290" height="600" id="flash-obj" align="middle">
-      <param name="movie" value="<%= asset_path("page-bg.swf"); %>" />
+      <param name="movie" value="<%= asset_path("flash/page-bg.swf"); %>" />
       <param name="quality" value="high" />
       <param name="play" value="true" />
       <param name="loop" value="false" />
@@ -50,7 +27,7 @@
       <param name="allowFullScreen" value="true" />
       <param name="allowScriptAccess" value="always" />
 
-      <embed name="video" id="flash-page-bg" src="<%= asset_path("page-bg.swf"); %>" type="application/x-shockwave-flash"
+      <embed name="video" id="flash-page-bg" src="<%= asset_path("flash/page-bg.swf"); %>" type="application/x-shockwave-flash"
           width="1290" height="600" wmode="transparent"
           allowScriptAccess="always" allowFullScreen="true" swliveconnect="true">
       </embed>

@@ -1,0 +1,36 @@
+<div class="news-block page-block">
+    <h1 class="title"><span>NEWS</span><div class="border"></div></h1>
+
+    <div class="top-line"></div>    
+    <div class="news-list">
+
+      <% @posts.each do |post| %>
+        <%= link_to post_url(post, :locale => I18n.locale), :class => 'list-item' do %>
+          <div class="wrapper">
+            <div class="foto">
+              <% if post.image_file_name.nil? %>
+                <img width="183" src="<%= asset_path("news-foto.png"); %>" alt="" />
+              <% else %>
+                <%= image_tag post.image.url(:thumb) %>
+              <% end %>
+            </div>
+            <span class="date"><%= post.data %></span>
+            
+            <div class="news-line"></div>
+            
+            <span class="title"><%= post.title %></span>
+            <span class="content"><%= post.content %></span>
+          </div>
+        <% end %>  
+      <% end %>
+
+      <!-- <%= link_to 'New Post', new_post_path %>-->
+    </div>
+    <div class="bot-line"></div>
+
+    <br />
+
+
+
+    <div class="page-bg"></div>
+</div>

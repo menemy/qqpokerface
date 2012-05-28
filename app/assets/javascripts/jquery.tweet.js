@@ -30,7 +30,8 @@
       twitter_url: "twitter.com",               // [string]   custom twitter url, if any (apigee, etc.)
       twitter_api_url: "api.twitter.com",       // [string]   custom twitter api url, if any (apigee, etc.)
       twitter_search_url: "search.twitter.com", // [string]   custom twitter search url, if any (apigee, etc.)
-      template: "{avatar}{time}{join}{text}",   // [string or function] template used to construct each tweet <li> - see code for available vars
+      //template: "{avatar}{time}{join}{text}",   // [string or function] template used to construct each tweet <li> - see code for available vars
+      template: "{text}",   // [string or function] template used to construct each tweet <li> - see code for available vars
       comparator: function(tweet1, tweet2) {    // [function] comparator used to sort tweets (see Array.sort)
         return tweet2["tweet_time"] - tweet1["tweet_time"];
       },
@@ -191,7 +192,8 @@
       o.tweet_relative_time = relative_time(o.tweet_time);
       o.entities = item.entities ? (item.entities.urls || []).concat(item.entities.media || []) : [];
       o.tweet_raw_text = o.retweet ? ('RT @'+o.retweeted_screen_name+' '+item.retweeted_status.text) : item.text; // avoid '...' in long retweets
-      o.tweet_text = $([linkURLs(o.tweet_raw_text, o.entities)]).linkUser().linkHash()[0];
+      //o.tweet_text = $([linkURLs(o.tweet_raw_text, o.entities)]).linkUser().linkHash()[0];
+      o.tweet_text = $([linkURLs(o.tweet_raw_text, o.entities)])[0];
       o.tweet_text_fancy = $([o.tweet_text]).makeHeart()[0];
 
       // Default spans, and pre-formatted blocks for common layouts

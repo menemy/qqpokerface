@@ -1,0 +1,33 @@
+<div class="albums-block page-block">
+    <h1 class="title"><span>albums</span><div class="border"></div></h1>
+
+    <div class="top-line"></div>    
+    <div class="albums-list">
+
+      <% @albums.each do |album| %>
+        <%= link_to album_url(album, :locale => I18n.locale ), :class => 'list-item' do %>
+          <div class="wrapper">
+            <div class="foto">
+              <% if album.image_file_name.nil? %>
+                <img width="183" src="<%= asset_path("news-foto.png"); %>" alt="" />
+              <% else %>
+                <%= image_tag album.image.url(:thumb) %>
+              <% end %>
+            </div>
+            <span class="date"><%= album.date %></span>
+            
+            <div class="albums-line"></div>
+            
+            <span class="title"><%= album.title %></span>
+          </div>
+        <% end %>
+      <% end %>
+
+      <!-- <%= link_to 'New album', new_album_path %>-->
+    </div>
+    <div class="bot-line"></div>
+
+    <br />
+
+    <div class="page-bg"></div>
+</div>

@@ -11,3 +11,88 @@
  *= require_self
  *= require_tree .
 */
+
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: Verdana, 'OfficinaSerifCRegularBold';
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+#page {
+  width: 1290px;
+  height: 100%;
+  margin: 0 auto;
+}
+#content { height: 100%; }
+#header { 
+  height: 195px;
+  width: 975px;
+  background: url(menu-bg.png) no-repeat;
+  padding-top: 15px;  
+  margin: 0 auto;
+}
+
+#language-selector {
+  display: none;
+
+  margin-left: 49px;
+  font: bold 15px 'OfficinaSerifCRegularBold';
+  color: #f66029;
+}
+#menu { color: #fff; }
+
+#menu {
+  list-style: none;
+  margin: 0 10px;
+  padding: 0px;
+
+  font-family: 'OfficinaSerifCRegularBold', Verdana;
+}
+
+#menu .menu-item { 
+  float: left;
+
+  width: 105px;
+  height: 195px;
+
+  text-align: center;
+  vertical-align: middle;
+}
+#menu .menu-item.logo {
+  width: 275px;
+}
+#menu .menu-item.last { width: 150px; }
+#menu .menu-item a.no-border { border: none; }
+#menu .menu-item a { 
+  display: block;
+  font-size: 17px;
+  text-transform: uppercase;
+  border-right: 1px solid #616161;
+  color: #fff;
+  text-decoration: none;
+  margin-top: 75px;
+}
+#menu .menu-item a:hover { color: #f66029; }
+#menu .menu-item.logo a { 
+  width: 275px;
+  height: 175px;
+  border: none;
+  background: url("logo.png") no-repeat;
+  margin: 0px;
+}
+
+.page-block .page-bg {
+  position: absolute;
+  top: 120px;
+
+  width: 1290px;
+  height: 500px;
+
+  z-index: -1000;
+}
+
+.page-block .title span {
+  font-family: 'OfficinaSerifCRegularBook', Verdana;
+}
