@@ -3,10 +3,10 @@ class AlbumItem < ActiveRecord::Base
 
  	has_attached_file :image,
     :storage => :s3,
-    :bucket => ENV['S3_BUCKET_NAME'],
+    :bucket => 'qqpokerface-assets',
     :s3_credentials => {
-      :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
-      :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
+      :access_key_id => 'AKIAIYXZEHOAZHBVXSEA',
+      :secret_access_key => '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'
     },
  		:styles => { :full => "880x880>", :thumb => "185x185>" }
 
