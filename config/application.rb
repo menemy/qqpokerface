@@ -9,6 +9,10 @@ if defined?(Bundler)
   # Bundler.require(:default, :assets, Rails.env)
 end
 
+ENV['S3_BUCKET_NAME'] = 'qqpokerface-assets'
+ENV['AWS_ACCESS_KEY_ID'] = 'AKIAIYXZEHOAZHBVXSEA'
+ENV['AWS_SECRET_ACCESS_KEY'] = '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'
+
 module Qqstudy
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
@@ -51,7 +55,7 @@ module Qqstudy
     # parameters by using an attr_accessible or attr_protected declaration.
     # config.active_record.whitelist_attributes = true
     config.action_dispatch.x_sendfile_header = nil
-    
+
     # Enable the asset pipeline
     config.assets.enabled = true
     config.assets.compile = true

@@ -4,12 +4,11 @@ class Post < ActiveRecord::Base
 
   friendly_id :title, use: :slugged
 
- 	has_attached_file :image, 
+ 	has_attached_file :image, :styles => { :medium => "250x250>", :thumb => "180x180>" },
     :storage => :s3,
-    :bucket => 'qqpokerface-assets',
+    :bucket => ENV['S3_BUCKET_NAME'],
     :s3_credentials => {
-      :access_key_id => 'AKIAIYXZEHOAZHBVXSEA',
-      :secret_access_key => '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'
-    },
- 		:styles => { :medium => "250x250>", :thumb => "180x180>" }
+      :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+      :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
+    }
 end

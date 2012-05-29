@@ -28,6 +28,7 @@ end
 
 gem "paperclip", "~> 3.0"
 gem 'aws-s3'
+gem 'aws-sdk'
 
 gem 'friendly_id'
 gem 'jquery-rails'
