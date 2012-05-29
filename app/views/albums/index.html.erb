@@ -5,7 +5,7 @@
     <div class="albums-list">
 
       <% @albums.each do |album| %>
-        <%= link_to album_url(album, :locale => I18n.locale ), :class => 'list-item' do %>
+        <%= link_to url_for( :controller => 'albums', :action => 'show', :id => album, :locale => I18n.locale ), :class => 'list-item' do %>
           <div class="wrapper">
             <div class="foto">
               <% if album.image_file_name.nil? %>
@@ -14,7 +14,7 @@
                 <%= image_tag album.image.url(:thumb) %>
               <% end %>
             </div>
-            <span class="date"><%= album.date %></span>
+            <span class="date"><%= album.date.strftime('%d.%m.%y') %></span>
             
             <div class="albums-line"></div>
             

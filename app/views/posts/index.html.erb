@@ -5,7 +5,7 @@
     <div class="news-list">
 
       <% @posts.each do |post| %>
-        <%= link_to post_url(post, :locale => I18n.locale), :class => 'list-item' do %>
+        <%= link_to url_for( :controller => 'posts', :action => 'show', :id => post, :locale => I18n.locale), :class => 'list-item' do %>
           <div class="wrapper">
             <div class="foto">
               <% if post.image_file_name.nil? %>
@@ -14,7 +14,7 @@
                 <%= image_tag post.image.url(:thumb) %>
               <% end %>
             </div>
-            <span class="date"><%= post.data %></span>
+            <span class="date"><%= post.data.strftime('%d.%m.%y') %></span>
             
             <div class="news-line"></div>
             
