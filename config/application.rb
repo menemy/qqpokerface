@@ -50,9 +50,11 @@ module Qqstudy
     # in your app. As such, your models will need to explicitly whitelist or blacklist accessible
     # parameters by using an attr_accessible or attr_protected declaration.
     # config.active_record.whitelist_attributes = true
-
+    config.action_dispatch.x_sendfile_header = nil
+    
     # Enable the asset pipeline
     config.assets.enabled = true
+    config.assets.compile = true
     config.assets.paths << Rails.root.join("app", "assets", "images/flash")
     config.assets.paths << Rails.root.join("app", "assets", "images/fonts")
 
