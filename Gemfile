@@ -27,6 +27,8 @@ group :assets do
 end
 
 gem "paperclip", "~> 3.0"
+gem 'aws-s3'
+
 gem 'friendly_id'
 gem 'jquery-rails'
 
