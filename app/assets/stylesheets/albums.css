@@ -2,7 +2,7 @@
 	width: 975px;
 	margin: 0 auto;
 }
-.albums-block .page-bg { width: 975px; background:url(news-bg.png) -10px 37px no-repeat; }
+.albums-block .page-bg { width: 975px; background:url(gallery-bg.png) -10px 37px no-repeat; }
 
 .albums-block div.top-line,
 .albums-block div.bot-line {
@@ -25,24 +25,33 @@
 .albums-block .albums-list {
 	color: #fff;
 	height: 425px;
+	margin-left: 42px;
 }
 .albums-list .list-item {
 	float: left;
 
 	cursor: pointer;
 	margin: 0 10px 20px 10px;
-	padding: 10px 10px;
+	padding: 10px;
 
-	width: 203px;
-	height: 180px;
-
-	background:url(news-list-bg.png) no-repeat;
-
+	width: 180px;
+	height: 185px;
 	text-decoration: none;
+
+	background-color: #1b1b1b;
+	border: 1px solid #3e3e3e;
+}
+.albums-list .list-item.hover {
+	opacity: 0.6;
+	-moz-opacity: 0.6;
+	filter:alpha(opacity=6);
+
+	background-color: #8d310d;
+	border: 1px solid #8d310d;
 }
 
-.albums-list .list-item .wrapper { overflow: hidden; height: 183px; }
-.albums-list .list-item .foto { height: 121px; overflow: hidden; }
+.albums-list .list-item .wrapper { overflow: hidden; height: 180px; }
+.albums-list .list-item .foto { height: 125px; overflow: hidden; }
 .albums-list .list-item .date {
 	display: block;
 	margin: 7px 0;
@@ -68,12 +77,4 @@
 	width: 183px;
 	font: 11px Verdana;
 	color: #fff;
-}
-
-.albums-list .list-item.hover {
-	opacity: 0.6;
-	-moz-opacity: 0.6;
-	filter:alpha(opacity=6);
-
-	background:url(news-list-hover-bg.png) no-repeat;
 }

@@ -2,7 +2,8 @@ class AlbumItemsController < ApplicationController
   # GET /album_items
   # GET /album_items.json
   def index
-    @album_items = AlbumItem.all
+    @album = Album.find_by_slug(params[:album_id])
+    @album_items = @album.album_items
 
     respond_to do |format|
       format.html # index.html.erb
@@ -13,7 +14,8 @@ class AlbumItemsController < ApplicationController
   # GET /album_items/1
   # GET /album_items/1.json
   def show
-    @album_item = AlbumItem.find(params[:id])
+    @album = Album.find_by_slug(params[:album_id])
+    @album_item = @album.album_items.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -24,6 +26,7 @@ class AlbumItemsController < ApplicationController
   # GET /album_items/new
   # GET /album_items/new.json
   def new
+    @album = Album.find_by_slug(params[:album_id])
     @album_item = AlbumItem.new
 
     respond_to do |format|
@@ -40,8 +43,8 @@ class AlbumItemsController < ApplicationController
   # POST /album_items
   # POST /album_items.json
   def create
-    @album = Album.find(params[:album_id])
-    @album_item = AlbumItem.new(params[:album_item])
+    @album = Album.find_by_slug(params[:album_id])
+    @album_item = @album.album_items.create(params[:album_item])
 
     respond_to do |format|
       if @album_item.save

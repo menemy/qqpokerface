@@ -1,0 +1,35 @@
+.album_item-block {
+	width: 975px;
+	margin: 0 auto;
+}
+.album_item-block .page-bg { width: 975px; background:url(gallery-bg.png) -10px 37px no-repeat; }
+
+.album_item-block div.top-line,
+.album_item-block div.bot-line {
+	width: 975px;
+	height: 2px;
+	background: url(wide-line.png) no-repeat;
+	margin: 25px 0 45px 0px;
+}
+
+.album_item-block h1.title {
+	margin-bottom: 20px;
+}
+
+.album_item-block .album-date,
+.album_item-block .album-title {margin-left: 52px; }
+.album_item-block .album-date {
+	display: block;
+	font: bold 14px Verdana;
+	color: #ff4400;
+}
+.album_item-block .album-title {
+	display: block;
+	font: 18px Verdana;
+	color: #fff;
+}
+
+.album_item-block .wrapper img {
+	display: block;
+	margin-left: 52px;
+}

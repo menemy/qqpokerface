@@ -9,7 +9,7 @@
           <div class="wrapper">
             <div class="foto">
               <% if post.image_file_name.nil? %>
-                <img width="183" src="<%= asset_path("news-foto.png"); %>" alt="" />
+                <img width="180" src="<%= asset_path("news-foto.png"); %>" alt="" />
               <% else %>
                 <%= image_tag post.image.url(:thumb) %>
               <% end %>

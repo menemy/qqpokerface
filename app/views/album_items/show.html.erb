@@ -1,5 +1,23 @@
 <p id="notice"><%= notice %></p>
 
+<p>
+<div class="album_item-block page-block">
+    <h1 class="title"><span>gallery</span><div class="border"></div></h1>
+   
+    <span class="album-date"><%= @album.date.strftime('%d.%m.%y') %></span>
+    <span class="album-title"><%= @album.title %></span>
 
-<%= link_to 'Edit', edit_album_item_path(@album_item) %> |
-<%= link_to 'Back', album_items_path %>
+    <%= link_to '', url_for( :controller => 'album_items', :action => 'index', :album_id => @album, :locale => I18n.locale ), :class => 'back-btn' %>
+
+    <div class="top-line"></div>    
+    <div class="album_item">
+      <div class="wrapper">
+          <%= image_tag @album_item.image.url(:full) %>
+      </div>
+    </div>
+    <div class="bot-line"></div>
+
+    <br />
+
+    <div class="page-bg"></div>
+</div>

@@ -1,21 +1,32 @@
-<h1>Listing album_items</h1>
+<div class="album_items-block page-block">
+    <h1 class="title"><span>gallery</span><div class="border"></div></h1>
+   
+    <span class="album-date"><%= @album.date.strftime('%d.%m.%y') %></span>
+    <span class="album-title"><%= @album.title %></span>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+    <%= link_to '', url_for( :controller => 'albums', :action => 'index', :locale => I18n.locale ), :class => 'back-btn' %>
 
-<% @album_items.each do |album_item| %>
-  <tr>
-    <td><%= link_to 'Show', album_item %></td>
-    <td><%= link_to 'Edit', edit_album_item_path(album_item) %></td>
-    <td><%= link_to 'Destroy', album_item, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
-</table>
+    <div class="top-line"></div>    
+    <div class="album_items-list">
 
-<br />
+      <% @album_items.each do |album_item| %>
+        <%= link_to url_for( :controller => 'album_items', :action => 'show', :id => album_item, :locale => I18n.locale ), :class => 'list-item' do %>
+          <div class="wrapper">
+            <div class="foto">
+              <% if album_item.image_file_name.nil? %>
+                <img width="185" src="<%= asset_path("news-foto.png"); %>" alt="" />
+              <% else %>
+                <%= image_tag album_item.image.url(:thumb) %>
+              <% end %>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
 
-<%= link_to 'New Album item', new_album_item_path %>
+    </div>
+    <div class="bot-line"></div>
+
+    <br />
+
+    <div class="page-bg"></div>
+</div>

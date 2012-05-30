@@ -4,7 +4,7 @@ class Album < ActiveRecord::Base
 
   friendly_id :title, use: :slugged
 
- 	has_attached_file :image, :styles => { :medium => "250x250>", :thumb => "185x185>" },
+ 	has_attached_file :image, :styles => { :medium => "250x250>", :thumb => "180x125>" },
     :storage => :s3,
     :bucket => ENV['S3_BUCKET_NAME'],
     :s3_credentials => {

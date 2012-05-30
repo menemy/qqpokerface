@@ -3,14 +3,18 @@ Qqstudy::Application.routes.draw do
     match '/bio' => 'home#bio'
 
     resources :posts
-    resources :albums
+    resources :albums do
+      resources :album_items
+    end
     
   scope "(:locale)", :locale => /en|ru/ do
     root :to => 'home#index'
     match '/bio' => 'home#bio'
 
     resources :posts
-    resources :albums
+    resources :albums do
+      resources :album_items
+    end
   end
   
   # The priority is based upon order of creation:

@@ -1,4 +1,4 @@
-<%= form_for(@album_item, :html => { :multipart => true }) do |f| %>
+<%= form_for([@album, @album_item], :html => { :multipart => true }) do |f| %>
   <% if @album_item.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@album_item.errors.count, "error") %> prohibited this album_item from being saved:</h2>
@@ -14,7 +14,7 @@
   <div class="field">
     <%= f.file_field :image %>
   </div>
-  
+
   <div class="actions">
     <%= f.submit %>
   </div>
