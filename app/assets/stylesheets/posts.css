@@ -25,6 +25,7 @@
 .news-block .news-list {
 	color: #fff;
 	height: 400px;
+	margin-left: 32px;
 }
 .news-list .list-item {
 	float: left;
