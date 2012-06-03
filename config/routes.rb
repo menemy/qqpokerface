@@ -3,14 +3,14 @@ Qqstudy::Application.routes.draw do
 
   devise_for :admin_users, ActiveAdmin::Devise.config
 
-    root :to => 'home#index'
-    match '/bio' => 'home#bio'
+  root :to => 'home#index'
+  match '/bio' => 'home#bio'
 
-    resources :posts
-    resources :albums do
-      resources :album_items
-    end
-    
+  resources :posts
+  resources :albums do
+    resources :album_items
+  end
+  
   scope "(:locale)", :locale => /en|ru/ do
     root :to => 'home#index'
     match '/bio' => 'home#bio'
