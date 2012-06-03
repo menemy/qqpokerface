@@ -9,13 +9,7 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require fonts
- *= require home
- *= require jquery.tweet
- *= require posts
- *= require albums
- *= require album_item
- *= require album_items
+ *= require_tree .
 */
 
 body {
@@ -123,30 +117,3 @@ body {
 .back-btn:hover {
   background-position: 0 -0;
 }
-
-
-.pagination { position: absolute; width: 100%; }
-.pagination .previous_page {
-  display: block;
-  position: absolute;
-  left: -35px;
-
-  width: 35px;
-  height: 100px;
-
-  background: url(nav-arrows.png) no-repeat;
-}
-.pagination a.previous_page:hover { background-position: 0 -100px; }
-
-.pagination .next_page {
-  display: block;
-  position: absolute;
-  left: 930px;
-  
-  width: 35px;
-  height: 100px;
-  
-  background: url(nav-arrows.png) no-repeat -35px 0;
-}
-.pagination a.next_page:hover { background-position: -35px -100px; }
-.pagination .disabled { display: none; }
