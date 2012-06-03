@@ -22,9 +22,8 @@ gem "paperclip", "~> 3.0"
 gem 'aws-s3'
 gem 'aws-sdk'
 
-
 gem "meta_search",    '>= 1.1.0.pre'
-gem "activeadmin", :git => "git://github.com/gregbell/active_admin.git"
+gem "activeadmin"
 
 gem 'friendly_id'
 gem 'will_paginate'

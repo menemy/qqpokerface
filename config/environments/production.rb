@@ -15,12 +15,12 @@ Qqstudy::Application.configure do
   config.assets.compress = true
 
   # Don't fallback to assets pipeline if a precompiled asset is missed
-  config.assets.compile = true
+  config.assets.compile = false
 
   # Generate digests for assets URLs
   config.assets.digest = true
   config.assets.initialize_on_precompile = false
-  config.assets.precompile += ['active_admin.css.scss', 'active_admin.js'] 
+  config.assets.precompile += ['active_admin.js', 'active_admin.css']
 
   # Defaults to Rails.root.join("public/assets")
   # config.assets.manifest = YOUR_PATH

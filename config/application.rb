@@ -4,7 +4,8 @@ require 'rails/all'
 
 if defined?(Bundler)
   # If you precompile assets before deploying to production, use this line
-  Bundler.require(*Rails.groups(:assets => %w(development test)))
+  # Bundler.require(*Rails.groups(:assets => %w(development test)))
+  Bundler.require *Rails.groups(:assets)
   # If you want your assets lazily compiled in production, use this line
   # Bundler.require(:default, :assets, Rails.env)
 end
@@ -58,7 +59,7 @@ module Qqstudy
 
     # Enable the asset pipeline
     config.assets.enabled = true
-    config.assets.compile = true
+    config.assets.initialize_on_precompile = false
     config.assets.paths << Rails.root.join("app", "assets", "images/flash")
     config.assets.paths << Rails.root.join("app", "assets", "images/fonts")
 
