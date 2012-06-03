@@ -3,7 +3,7 @@ class AlbumItemsController < ApplicationController
   # GET /album_items.json
   def index
     @album = Album.find_by_slug(params[:album_id])
-    @album_items = @album.album_items
+    @album_items = @album.album_items.search(params[:page])
 
     respond_to do |format|
       format.html # index.html.erb

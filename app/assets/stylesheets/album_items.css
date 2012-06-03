@@ -18,14 +18,14 @@
 
 .album_items-block .album_items-list {
 	color: #fff;
-	height: 425px;
+	height: 600px;
 	margin-left: 42px;
 }
 .album_items-list .list-item {
 	float: left;
 
 	cursor: pointer;
-	margin: 0 10px 20px 10px;
+	margin: 0 15px 20px 15px;
 	padding: 10px;
 
 	width: 180px;

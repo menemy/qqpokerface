@@ -9,6 +9,8 @@
     <div class="top-line"></div>    
     <div class="album_items-list">
 
+      <%= will_paginate @album_items, :page_links => false, :previous_label => '', :next_label => '' %>
+
       <% @album_items.each do |album_item| %>
         <%= link_to url_for( :controller => 'album_items', :action => 'show', :id => album_item, :locale => I18n.locale ), :class => 'list-item' do %>
           <div class="wrapper">

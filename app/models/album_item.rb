@@ -1,7 +1,7 @@
 class AlbumItem < ActiveRecord::Base
   include Paperclip::Glue
 
- 	has_attached_file :image, :styles => { :full => "880x880>", :thumb => "180x160>" },
+ 	has_attached_file :image, :styles => { :full => "880x880>", :thumb => "180x160>", :mini => "60x60>" },
     :storage => :s3,
     :bucket => ENV['S3_BUCKET_NAME'],
     :s3_credentials => {
@@ -10,4 +10,8 @@ class AlbumItem < ActiveRecord::Base
     }
 
  	belongs_to :album
+
+ 	def self.search(page)
+	  paginate :per_page => 12, :page => page
+	end
 end

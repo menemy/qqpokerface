@@ -4,6 +4,8 @@
     <div class="top-line"></div>    
     <div class="news-list">
 
+      <%= will_paginate @posts, :page_links => false, :previous_label => '', :next_label => '' %>
+
       <% @posts.each do |post| %>
         <%= link_to url_for( :controller => 'posts', :action => 'show', :id => post, :locale => I18n.locale), :class => 'list-item' do %>
           <div class="wrapper">
@@ -26,6 +28,9 @@
 
       <!-- <%= link_to 'New Post', new_post_path %>-->
     </div>
+
+    <br>
+
     <div class="bot-line"></div>
 
     <br />

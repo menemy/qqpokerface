@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.find(:all, :order => "data DESC")
+    @posts = Post.search(params[:search], params[:page])
 
     respond_to do |format|
       format.html # index.html.erb
