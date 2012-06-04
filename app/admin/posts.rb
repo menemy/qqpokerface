@@ -1,5 +1,14 @@
-ActiveAdmin.register Post do
-	index do |product|
+ActiveAdmin.register Post, :as => "News" do
+	menu :priority => 1
+
+	filter :title
+	filter :data, :label => "Date"
+	filter :locale, :as => :select, :collection => { 'Russian' => :ru, 'English' => :en }
+
+	config.sort_order = 'data_desc'
+	config.per_page = "5"
+
+	index :download_links => false do
 		column :id
 		column :locale
 
@@ -16,5 +25,31 @@ ActiveAdmin.register Post do
 		end
 
 		default_actions		
-	end  
+	end
+
+  form :html => { :enctype => "multipart/form-data" } do |f|
+    f.inputs "Details" do
+    	f.input :data, :label => "Date"
+      f.input :title
+
+      f.input :locale, :as => :radio, :collection => { 'Russian' => :ru, 'English' => :en }
+    end
+    f.inputs "Content" do
+      f.input :content
+    end
+
+    f.inputs "Image" do
+    	f.input :image, :as => :file, :hint => image_hint(f, :thumb)
+    end
+
+    f.buttons
+  end
+end
+
+def image_hint(form, size)
+	if not form.object.image_file_name.nil?
+		form.template.image_tag form.object.image.url(size)
+	else
+		"No image yet."
+	end
 end

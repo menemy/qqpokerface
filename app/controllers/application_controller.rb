@@ -12,4 +12,7 @@ class ApplicationController < ActionController::Base
 
     logger.debug "[u] locale set to #{I18n.locale}"
   end
+
+  # Override build_footer method in ActiveAdmin::Views::Pages
+  require 'active_admin_views_pages_base.rb'
 end

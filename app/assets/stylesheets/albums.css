@@ -41,6 +41,7 @@
 	background-color: #1b1b1b;
 	border: 1px solid #3e3e3e;
 }
+.albums-list .list-item:hover,
 .albums-list .list-item.hover {
 	opacity: 0.6;
 	-moz-opacity: 0.6;
