@@ -23,7 +23,7 @@ gem 'aws-s3'
 gem 'aws-sdk'
 
 gem "meta_search",    '>= 1.1.0.pre'
-gem "activeadmin"
+gem "activeadmin", :git => "https://github.com/gregbell/active_admin.git"
 
 gem 'friendly_id'
 gem 'will_paginate'
