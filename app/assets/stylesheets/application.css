@@ -9,13 +9,7 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require fonts
- *= require home
- *= require jquery.tweet
- *= require posts
- *= require albums
- *= require album_item
- *= require album_items
+ *= require_tree .
 */
 
 body {
