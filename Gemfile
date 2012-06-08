@@ -5,12 +5,17 @@ gem 'rails', '3.2.2'
 
 group :development do
 	gem 'sqlite3'
+
+	gem "meta_search"
+	gem "activeadmin"
 end
 
 group :production do
-	gem "thin", "1.3.1"
-	gem "eventmachine", "1.0.0.beta.4.1"
+	gem "thin"
 	gem 'pg'
+
+	gem "meta_search",    '>= 1.1.0.pre'
+	gem "activeadmin", :git => "https://github.com/gregbell/active_admin.git"
 end
 
 gem 'sass-rails',   '~> 3.2.3'
@@ -22,12 +27,6 @@ end
 gem "paperclip", "~> 3.0"
 gem 'aws-s3'
 gem 'aws-sdk'
-
-#gem "meta_search",    '>= 1.1.0.pre'
-#gem "activeadmin", :git => "https://github.com/gregbell/active_admin.git"
-
-gem "meta_search"
-gem "activeadmin"
 
 gem 'friendly_id'
 gem 'will_paginate'
