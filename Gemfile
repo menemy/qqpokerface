@@ -8,8 +8,7 @@ group :development do
 end
 
 group :production do
-	gem "thin", "1.3.1"
-	gem "eventmachine", "1.0.0.beta.4.1"
+	gem "thin"
 	gem 'pg'
 end
 
