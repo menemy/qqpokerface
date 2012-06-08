@@ -3,10 +3,10 @@ source 'https://rubygems.org'
 gem "heroku"
 gem 'rails', '3.2.2'
 
+gem "meta_search",    '>= 1.1.0.pre'
 group :development do
 	gem 'sqlite3'
 
-	gem "meta_search"
 	gem "activeadmin"
 end
 
