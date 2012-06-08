@@ -1,4 +1,5 @@
 //= require active_admin/base
+//= require tiny_mce/tiny_mce
 
 $(function(){
 	tinyMCE.init({

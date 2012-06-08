@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120603112334) do
+ActiveRecord::Schema.define(:version => 20120607224019) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -86,5 +86,22 @@ ActiveRecord::Schema.define(:version => 20120603112334) do
   end
 
   add_index "posts", ["slug"], :name => "index_posts_on_slug", :unique => true
+
+  create_table "publications", :force => true do |t|
+    t.string   "title"
+    t.string   "slug"
+    t.date     "date"
+    t.text     "content"
+    t.datetime "created_at",              :null => false
+    t.datetime "updated_at",              :null => false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.string   "press_file_file_name"
+    t.string   "press_file_content_type"
+    t.integer  "press_file_file_size"
+    t.datetime "press_file_updated_at"
+  end
 
 end

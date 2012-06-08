@@ -79,3 +79,29 @@
 	font: 11px Verdana;
 	color: #fff;
 }
+
+
+.news-block .news-one {
+	color: #fff;
+	min-height: 400px;
+	margin-left: 52px;
+}
+.news-block .news-one .foto {
+	display: block;
+	float: left;
+	padding: 0 20px 20px 0;
+}
+.news-block .news-one .date {
+	display: block;
+	color: #ff4400;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.news-block .news-one .title {
+	display: block;
+	color: #d7c494;
+	font-size: 18px;
+	font-weight: bold;
+	margin: 15px 0 30px 0;
+}

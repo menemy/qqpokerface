@@ -5,6 +5,7 @@ Qqstudy::Application.routes.draw do
   root :to => 'home#index'
   match '/bio' => 'home#bio'
 
+  resources :publications
   resources :posts
   resources :albums do
     resources :album_items
@@ -14,6 +15,7 @@ Qqstudy::Application.routes.draw do
     root :to => 'home#index'
     match '/bio' => 'home#bio'
 
+    resources :publications
     resources :posts
     resources :albums do
       resources :album_items

@@ -1,0 +1,33 @@
+<div class="news-block page-block">
+    <h1 class="title"><span>PRESS</span><div class="border"></div></h1>
+
+    <div class="top-line"></div>    
+    <div class="news-list">
+
+      <%= will_paginate @publications, :page_links => false, :previous_label => '', :next_label => '' %>
+
+      <ul>
+        <% @publications.each do |publication| %>
+          <li>
+            <%= link_to url_for( :controller => 'publications', :action => 'show', :id => publication, :locale => I18n.locale), :class => 'list-item' do %>
+              <% if publication.image_file_name.nil? %>
+                <img width="180" src="<%= asset_path("news-foto.png"); %>" alt="" />
+              <% else %>
+                <%= image_tag publication.image.url(:thumb) %>
+              <% end %>
+                
+              <span class="date"><%= publication.date.strftime('%d.%m.%y') %></span>
+              
+              <span class="title"><%= publication.title %></span>
+              <span class="content"><%= publication.content.html_safe %></span>
+              </div>
+            <% end %>  
+          </li>
+        <% end %>
+      </ul>
+
+    </div>
+
+    <div class="bot-line"></div>
+    <div class="page-bg"></div>
+</div>

@@ -21,7 +21,7 @@
             <div class="news-line"></div>
             
             <span class="title"><%= post.title %></span>
-            <span class="content"><%= post.content %></span>
+            <span class="content"><%= post.content.html_safe %></span>
           </div>
         <% end %>  
       <% end %>

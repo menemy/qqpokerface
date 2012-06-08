@@ -8,7 +8,8 @@ group :development do
 end
 
 group :production do
-	gem "thin"
+	gem "thin", "1.3.1"
+	gem "eventmachine", "1.0.0.beta.4.1"
 	gem 'pg'
 end
 
@@ -22,8 +23,11 @@ gem "paperclip", "~> 3.0"
 gem 'aws-s3'
 gem 'aws-sdk'
 
-gem "meta_search",    '>= 1.1.0.pre'
-gem "activeadmin", :git => "https://github.com/gregbell/active_admin.git"
+#gem "meta_search",    '>= 1.1.0.pre'
+#gem "activeadmin", :git => "https://github.com/gregbell/active_admin.git"
+
+gem "meta_search"
+gem "activeadmin"
 
 gem 'friendly_id'
 gem 'will_paginate'

@@ -4,7 +4,7 @@ class Post < ActiveRecord::Base
 
   friendly_id :title, use: :slugged
 
- 	has_attached_file :image, :styles => { :medium => "250x250>", :thumb => "180x180>", :mini => "60x60>" },
+ 	has_attached_file :image, :styles => { :one => '425x425>', :medium => "250x250>", :thumb => "180x180>", :mini => "60x60>" },
     :storage => :s3,
     :bucket => ENV['S3_BUCKET_NAME'],
     :s3_credentials => {

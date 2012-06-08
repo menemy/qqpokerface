@@ -109,7 +109,7 @@ body {
   background: url(title-line.png) bottom right no-repeat;
 }
 
-.back-btn {
+.back-btn, .post-back-btn {
   position: absolute;
   top: 305px;
   left: 700px;
@@ -120,9 +120,10 @@ body {
 
   background: url(back-btn.png) 0 -35px no-repeat;
 }
-.back-btn:hover {
+.back-btn:hover, .post-back-btn:hover {
   background-position: 0 -0;
 }
+.post-back-btn { top: 295px; }
 
 
 .pagination { position: absolute; width: 100%; }

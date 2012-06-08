@@ -1,36 +1,28 @@
-<!-- <p id="notice"><%= notice %></p>
+<div class="news-block page-block">
+    <h1 class="title"><span>NEWS</span><div class="border"></div></h1>
 
-<p>
-  <b>Data:</b>
-  <%= @post.data %>
-</p>
+    <%= link_to '', url_for( :controller => 'posts', :action => 'index', :locale => I18n.locale ), :class => 'post-back-btn' %>
 
-<p>
-  <b>image:</b>
-  <%= image_tag @post.image.url(:thumb) %>
-</p>
+    <div class="top-line"></div>    
+    
+    <div class="news-one">
+      <div class="foto">
+        <% if @post.image_file_name.nil? %>
+          <img width="425" src="<%= asset_path("news-foto.png"); %>" alt="" />
+        <% else %>
+          <%= image_tag @post.image.url(:medium) %>
+        <% end %>
+      </div>
+      
+      <span class="date"><%= @post.data.strftime('%d.%m.%y') %></span>      
+      <span class="title"><%= @post.title %></span>
 
-<p>
-  <b>Title:</b>
-  <%= @post.title %>
-</p>
+      <span class="content">
+        <%= @post.content.html_safe %>
+      </span>
+    </div>
 
-<p>
-  <b>Content:</b>
-  <%= @post.content %>
-</p>
+    <div class="bot-line"></div>
 
-<p>
-  <b>Type:</b>
-  <%= @post.type %>
-</p>
-
-<p>
-  <b>Locale:</b>
-  <%= @post.locale %>
-</p>
-
-
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
--->
+    <div class="page-bg"></div>
+</div>

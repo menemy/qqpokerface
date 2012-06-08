@@ -20,8 +20,8 @@ ActiveAdmin.register Post, :as => "News" do
       end
     end
 		column :title
-		column "Created At", :sortable => :data do |product|
-			product.data.strftime('%d.%m.%y')
+		column "Created At", :sortable => :data do |post|
+			post.data.strftime('%d.%m.%y')
 		end
 
 		default_actions		
