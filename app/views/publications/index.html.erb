@@ -1,3 +1,28 @@
-<% @publications.each do |publication| %>
-  sdsd
-<% end %>
+<div class="press-block page-block">
+    <h1 class="title"><span>PRESS</span><div class="border"></div></h1>
+
+    <div class="top-line"></div>    
+    <div class="press-list">
+
+      <% @publications.each do |publication| %>
+        <%= link_to publication.press_file.url, :class => 'list-item' do %>
+          <% if publication.image_file_name.nil? %>
+            <img width="180" src="<%= asset_path("news-foto.png"); %>" class="foto" alt="" />
+          <% else %>
+            <%= image_tag publication.image.url(:thumb), :class => 'foto' %>
+          <% end %>
+            
+          <span class="date"><%= publication.date.strftime('%d.%m.%y') %></span>
+          <span class="title"><%= publication.title %></span>
+
+          <span class="pdf-icon"></span>
+
+          <span class="content"><%= publication.content.html_safe %></span>
+        <% end %>
+      <% end %>
+
+    </div>
+
+    <div class="bot-line"></div>
+    <div class="page-bg"></div>
+</div>
