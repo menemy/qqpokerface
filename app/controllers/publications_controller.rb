@@ -2,7 +2,7 @@ class PublicationsController < ApplicationController
   # GET /publications
   # GET /publications.json
   def index
-    @publications = Publication.all
+    @publications = Publication.search(params[:page])
 
     respond_to do |format|
       format.html # index.html.erb

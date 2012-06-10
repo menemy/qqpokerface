@@ -4,23 +4,27 @@
     <div class="top-line"></div>    
     <div class="press-list">
 
-      <% @publications.each do |publication| %>
-        <%= link_to publication.press_file.url, :class => 'list-item' do %>
-          <% if publication.image_file_name.nil? %>
-            <img width="180" src="<%= asset_path("news-foto.png"); %>" class="foto" alt="" />
-          <% else %>
-            <%= image_tag publication.image.url(:thumb), :class => 'foto' %>
-          <% end %>
-            
-          <span class="date">2012.25.05</span>
-          <span class="title"><%= publication.title %></span>
+      <% if @publications %>
 
-          <% if is_pdf?(publication.image_file_name) %>
-            <span class="pdf-icon"></span>
-          <% end %>
+        <% @publications.each do |publication| %>
+          <%= link_to publication.press_file.url, :class => 'list-item' do %>
+            <% if publication.image_file_name.nil? %>
+              <img width="180" src="<%= asset_path("news-foto.png"); %>" class="foto" alt="" />
+            <% else %>
+              <%= image_tag publication.image.url(:thumb), :class => 'foto' %>
+            <% end %>
+              
+            <span class="date"><%= publication.date.strftime('%d.%m.%y') %></span>
+            <span class="title"><%= publication.title %></span>
 
-          <span class="content"><%= publication.content.html_safe %></span>
+            <% if is_pdf?(publication.image_file_name) %>
+              <span class="pdf-icon"></span>
+            <% end %>
+
+            <span class="content"><%= publication.content.html_safe %></span>
+          <% end %>
         <% end %>
+
       <% end %>
 
     </div>
