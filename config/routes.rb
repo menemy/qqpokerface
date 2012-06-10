@@ -6,12 +6,12 @@ Qqstudy::Application.routes.draw do
   match '/bio' => 'home#bio'
 
 
-  resources :publications, :path => 'press'
-  resources :events, :path => 'dates'
+  resources :publications
+  resources :events
   
-  resources :posts, :path => 'news'
-  resources :albums, :path => 'gallery' do
-    resources :album_items, :path => 'items'
+  resources :posts
+  resources :albums do
+    resources :album_items
   end
 
   scope "(:locale)", :locale => /en|ru/ do
@@ -20,12 +20,12 @@ Qqstudy::Application.routes.draw do
 
     match 'dates/:year/:month/' => 'events#build_list'
 
-    resources :publications, :path => 'press'
-    resources :events, :path => 'dates'
+    resources :publications
+    resources :events
     
-    resources :posts, :path => 'news'
-    resources :albums, :path => 'gallery' do
-      resources :album_items, :path => 'items'
+    resources :posts
+    resources :albums do
+      resources :album_items
     end
   end
   
