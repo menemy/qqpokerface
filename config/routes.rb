@@ -1,24 +1,31 @@
-Qqstudy::Application.routes.draw do  
+Qqstudy::Application.routes.draw do
   ActiveAdmin.routes(self)
   devise_for :admin_users, ActiveAdmin::Devise.config
 
   root :to => 'home#index'
   match '/bio' => 'home#bio'
 
-  resources :publications
-  resources :posts
-  resources :albums do
-    resources :album_items
-  end
+
+  resources :publications, :path => 'press'
+  resources :events, :path => 'dates'
   
+  resources :posts, :path => 'news'
+  resources :albums, :path => 'gallery' do
+    resources :album_items, :path => 'items'
+  end
+
   scope "(:locale)", :locale => /en|ru/ do
     root :to => 'home#index'
     match '/bio' => 'home#bio'
 
-    resources :publications
-    resources :posts
-    resources :albums do
-      resources :album_items
+    match 'dates/:year/:month/' => 'events#build_list'
+
+    resources :publications, :path => 'press'
+    resources :events, :path => 'dates'
+    
+    resources :posts, :path => 'news'
+    resources :albums, :path => 'gallery' do
+      resources :album_items, :path => 'items'
     end
   end
   

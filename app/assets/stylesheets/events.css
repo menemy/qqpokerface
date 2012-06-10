@@ -1,0 +1,30 @@
+.events-block {
+	width: 975px;
+	margin: 0 auto;
+}
+.events-block .page-bg { width: 975px; background: url(news-bg.png) -10px 37px no-repeat; }
+
+.events-block div.top-line,
+.events-block div.bot-line {
+	width: 975px;
+	height: 2px;
+	background: url(wide-line.png) no-repeat;
+	margin: 45px 0px;
+}
+
+.events-block h1.title {  position: relative; color: #d7c494; margin: 30px 0 65px 0; height: 35px; }
+.events-block h1.title span { position: absolute; top: 0px; left: 32px; background-color: #000; padding: 0 15px; z-index: 100; }
+.events-block h1.title .border {
+	position: absolute;
+	bottom: 0px;
+	width: 975px;
+	height: 2px;
+	background: url(title-line.png) bottom right no-repeat;
+}
+.events-content { min-height: 300px; *height: 300px; padding-left: 42px; }
+.events-content .events-calendar { float: left; }
+.events-content .events-list { list-style: none; padding: 30px 0 0 0; margin-left: 410px; }
+.events-content .events-list .list-item { margin-bottom: 15px; padding: 10px; }
+.events-content .events-list .list-item.active { border: 1px solid #ff4400; }
+
+.events-content .events-list .list-item .date { color: #ff4400; }

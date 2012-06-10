@@ -16,4 +16,6 @@ jQuery(function($){
     };
     ticker();
   });
+
+   $('.events-calendar').datepicker().removeClass('ui-corner-all');
 });

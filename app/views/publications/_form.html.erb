@@ -11,14 +11,19 @@
     </div>
   <% end %>
 
+
+  <div class="field">
+    <%= f.file_field :image %>
+  </div>
+  <div class="field">
+    <%= f.file_field :press_file %>
+  </div>
+
   <div class="field">
     <%= f.label :title %><br />
     <%= f.text_field :title %>
   </div>
-  <div class="field">
-    <%= f.label :slug %><br />
-    <%= f.text_field :slug %>
-  </div>
+
   <div class="field">
     <%= f.label :date %><br />
     <%= f.date_select :date %>

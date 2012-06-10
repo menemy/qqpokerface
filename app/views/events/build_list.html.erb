@@ -1,0 +1,22 @@
+<div class="events-block page-block">
+    <h1 class="title"><span>DATES</span><div class="border"></div></h1>
+
+    <div class="top-line"></div>
+
+    <div class="events-content">
+
+      <div class="events-calendar"></div>
+      <ul class="events-list">
+
+        <% @events.each do |event| %>
+          <li class="list-item active">
+            <span class="date"><%= event.date.strftime('%d.%m.%y') %></span>
+            <span class="title"><%= event.title %></span>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+
+    <div class="bot-line"></div>
+    <div class="page-bg"></div>
+</div>

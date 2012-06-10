@@ -10,12 +10,15 @@
  *
  *= require_self
  *= require fonts
- *= require home
  *= require jquery.tweet
+ *= require calendar
+ *= require home
  *= require posts
  *= require albums
  *= require album_item
  *= require album_items
+ *= require publications
+ *= require events
 */
 
 body {
