@@ -76,7 +76,7 @@ class PublicationsController < ApplicationController
     @publication.destroy
 
     respond_to do |format|
-      format.html { redirect_to Publications_url }
+      format.html { redirect_to publications_url }
       format.json { head :no_content }
     end
   end
