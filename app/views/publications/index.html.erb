@@ -1,32 +1,27 @@
-<div class="press-block page-block">
-    <h1 class="title"><span>PRESS</span><div class="border"></div></h1>
+<h1>Listing publications</h1>
 
-    <div class="top-line"></div>    
-    <div class="press-list">
+<table>
+  <tr>
+    <th>Date</th>
+    <th>Title</th>
+    <th>Content</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
 
-      <%= will_paginate @publications, :page_links => false, :previous_label => '', :next_label => '' %>
+<% @publications.each do |publication| %>
+  <tr>
+    <td><%= publication.date %></td>
+    <td><%= publication.title %></td>
+    <td><%= publication.content %></td>
+    <td><%= link_to 'Show', publication %></td>
+    <td><%= link_to 'Edit', edit_publication_path(publication) %></td>
+    <td><%= link_to 'Destroy', publication, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
 
-      <% @publications.each do |publication| %>
-        <%= link_to publication.press_file.url, :class => 'list-item' do %>
-          <% if publication.image_file_name.nil? %>
-            <img width="180" src="<%= asset_path("news-foto.png"); %>" class="foto" alt="" />
-          <% else %>
-            <%= image_tag publication.image.url(:thumb), :class => 'foto' %>
-          <% end %>
-            
-          <span class="date"><%= publication.date.strftime('%d.%m.%y') %></span>
-          <span class="title"><%= publication.title %></span>
+<br />
 
-          <% if is_pdf?(publication.image_file_name) %>
-            <span class="pdf-icon"></span>
-          <% end %>
-
-          <span class="content"><%= publication.content.html_safe %></span>
-        <% end %>
-      <% end %>
-
-    </div>
-
-    <div class="bot-line"></div>
-    <div class="page-bg"></div>
-</div>
+<%= link_to 'New Publication', new_publication_path %> 
