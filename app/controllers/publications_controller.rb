@@ -1,8 +1,8 @@
 class PublicationsController < ApplicationController
-  # GET /Publications
-  # GET /Publications.json
+  # GET /publications
+  # GET /publications.json
   def index
-    @publications = Publication.search(params[:page])
+    @publications = Publication.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -10,8 +10,8 @@ class PublicationsController < ApplicationController
     end
   end
 
-  # GET /Publications/1
-  # GET /Publications/1.json
+  # GET /publications/1
+  # GET /publications/1.json
   def show
     @publication = Publication.find(params[:id])
 
@@ -21,8 +21,8 @@ class PublicationsController < ApplicationController
     end
   end
 
-  # GET /Publications/new
-  # GET /Publications/new.json
+  # GET /publications/new
+  # GET /publications/new.json
   def new
     @publication = Publication.new
 
@@ -32,13 +32,13 @@ class PublicationsController < ApplicationController
     end
   end
 
-  # GET /Publications/1/edit
+  # GET /publications/1/edit
   def edit
     @publication = Publication.find(params[:id])
   end
 
-  # Publication /Publications
-  # Publication /Publications.json
+  # Publication /publications
+  # Publication /publications.json
   def create
     @publication = Publication.new(params[:Publication])
 
@@ -53,8 +53,8 @@ class PublicationsController < ApplicationController
     end
   end
 
-  # PUT /Publications/1
-  # PUT /Publications/1.json
+  # PUT /publications/1
+  # PUT /publications/1.json
   def update
     @publication = Publication.find(params[:id])
 
@@ -69,8 +69,8 @@ class PublicationsController < ApplicationController
     end
   end
 
-  # DELETE /Publications/1
-  # DELETE /Publications/1.json
+  # DELETE /publications/1
+  # DELETE /publications/1.json
   def destroy
     @publication = Publication.find(params[:id])
     @publication.destroy
