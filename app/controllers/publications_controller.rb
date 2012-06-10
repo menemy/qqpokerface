@@ -40,7 +40,7 @@ class PublicationsController < ApplicationController
   # Publication /publications
   # Publication /publications.json
   def create
-    @publication = Publication.new(params[:Publication])
+    @publication = Publication.new(params[:publication])
 
     respond_to do |format|
       if @publication.save
@@ -59,7 +59,7 @@ class PublicationsController < ApplicationController
     @publication = Publication.find(params[:id])
 
     respond_to do |format|
-      if @publication.update_attributes(params[:Publication])
+      if @publication.update_attributes(params[:publication])
         format.html { redirect_to @publication, notice: 'Publication was successfully updated.' }
         format.json { head :no_content }
       else
