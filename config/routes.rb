@@ -5,7 +5,8 @@ Qqstudy::Application.routes.draw do
   root :to => 'home#index'
   match '/bio' => 'home#bio'
 
-
+  match 'dates/:date/' => 'events#build_list'
+  
   resources :publications, :path => 'press'
   resources :events, :path => 'dates'
   
@@ -18,7 +19,7 @@ Qqstudy::Application.routes.draw do
     root :to => 'home#index'
     match '/bio' => 'home#bio'
 
-    match 'dates/:year/:month/' => 'events#build_list'
+    match 'dates/:date/' => 'events#build_list'
 
     resources :publications, :path => 'press'
     resources :events, :path => 'dates'

@@ -24,7 +24,7 @@
 .events-content { min-height: 300px; *height: 300px; padding-left: 42px; }
 .events-content .events-calendar { float: left; }
 .events-content .events-list { list-style: none; padding: 30px 0 0 0; margin-left: 410px; }
-.events-content .events-list .list-item { margin-bottom: 15px; padding: 10px; }
-.events-content .events-list .list-item.active { border: 1px solid #ff4400; }
+.events-content .events-list .list-item { margin: 0 30px 15px 0; padding: 11px; }
+.events-content .events-list .list-item.active { border: 1px solid #ff4400; padding: 10px;}
 
 .events-content .events-list .list-item .date { color: #ff4400; }

@@ -17,5 +17,46 @@ jQuery(function($){
     ticker();
   });
 
-   $('.events-calendar').datepicker().removeClass('ui-corner-all');
+  $.getJSON({
+    url: '/dates.json',
+    dataType: 'json',
+    success: function(events){
+
+
+      
+    }
+  })
+
+$('.events-calendar').datepicker({
+          dateFormat: 'yy-mm-dd',
+          beforeShowDay: function(date) {
+            var dateAsString = date.getFullYear().toString() + "-" + (date.getMonth()+1).toString() + "-" + date.getDate();
+         /*   
+            for (i = 0; i < events.length; i++){
+              console.log(events[i].date)
+              if (dateAsString == events[i].date) {
+                  return [true, 'specialDay']
+              } else {
+                return true
+              }
+            }
+            */
+            return [true, '']
+          },
+          onSelect: function(dateText, inst) {
+            console.log(dateText)
+
+            $.ajax({
+              url: '/dates/' + dateText,
+              success: function(response){
+                console.log(response)
+
+                $(".events-list").html(response)
+              }
+            })
+          }
+        })
+
+
+  
 });

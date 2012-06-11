@@ -150,3 +150,7 @@
 
 /* Other Months Days*/
 .ui-datepicker-other-month .ui-state-default { color: #565656; }
+
+.specialDay, .ui-datepicker-calendar .specialDay a { 
+	color: #ff4400;
+}

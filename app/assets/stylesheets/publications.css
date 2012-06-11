@@ -58,4 +58,4 @@
 	height: 30px;
 }
 
-.press-block .press-list .list-item .content { display: block; color: #fff; font-size: 12px; }
+.press-block .press-list .list-item .content { display: block; color: #fff; font-size: 12px; text-decoration: underline; }
