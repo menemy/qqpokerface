@@ -2,7 +2,7 @@
 
 <p>
 <div class="album_item-block page-block">
-    <h1 class="title"><span>gallery</span><div class="border"></div></h1>
+    <h1 class="title"><span>gallery</span></h1>
    
     <span class="album-date"><%= @album.date.strftime('%d.%m.%y') %></span>
     <span class="album-title"><%= @album.title %></span>
@@ -11,6 +11,12 @@
 
     <div class="top-line"></div>    
     <div class="album_item">
+      
+      <div class="pagination">
+        <a class="previous_page " rel="previous" href="/en/gallery/poker-party-paris/items?page=2"></a>
+        <a class="next_page" rel="next" href="/en/gallery/poker-party-paris/items?page=2"></a>
+      </div>
+
       <div class="wrapper">
           <%= image_tag @album_item.image.url(:full) %>
       </div>

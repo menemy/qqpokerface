@@ -2,7 +2,7 @@
 	width: 975px;
 	margin: 0 auto;
 }
-.news-block .page-bg { width: 975px; background: url(news-bg.png) -10px 37px no-repeat; }
+.news-block .page-bg { width: 975px; background: url(news-bg.png) 60px 39px no-repeat; }
 
 .news-block div.top-line,
 .news-block div.bot-line {

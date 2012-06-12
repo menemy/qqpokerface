@@ -61,8 +61,8 @@
 	width: 975px;
 	margin: 0 auto;
 }
-.bio-block .page-bg { width: 975px; background: url(bio-bg.png) -40px 39px no-repeat; }
-
+.bio-block .page-bg { width: 975px; background: url(bio-bg.png) 70px 39px no-repeat; }
+.bio-block h1.title { margin: 23px 0 73px 0; }
 .bio-block div.top-line,
 .bio-block div.bot-line {
 	width: 975px;
