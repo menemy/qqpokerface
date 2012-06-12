@@ -2,7 +2,7 @@
 	width: 975px;
 	margin: 0 auto;
 }
-.press-block .page-bg { width: 975px; background: url(news-bg.png) -10px 37px no-repeat; }
+.press-block .page-bg { width: 975px; background: url(press-bg.png) 60px 39px no-repeat; }
 
 .press-block div.top-line,
 .press-block div.bot-line {
@@ -11,8 +11,8 @@
 	background: url(wide-line.png) no-repeat;
 	margin: 45px 0px;
 }
-.press-block div.top-line { margin: 45px 0 35px 0; }
-.press-block div.bot-line { margin: 35px 0 45px 0; }
+.press-block div.top-line { margin: 35px 0; }
+.press-block div.bot-line { margin: 35px 0; }
 
 .press-block h1.title {  position: relative; color: #d7c494; margin: 30px 0 65px 0; height: 35px; }
 .press-block h1.title span { position: absolute; top: 0px; left: 32px; background-color: #000; padding: 0 15px; z-index: 100; }
@@ -26,18 +26,14 @@
 
 .press-block .press-list {
 	color: #fff;
-	height: 400px;
 	margin: 0 0 0 42px;
 }
 .press-list .list-item {
 	display: block;
-
 	cursor: pointer;
-	margin: 15px 0;
-	padding: 10px 0;
-
+	margin-bottom: 15px;
 	width: 100%;
-	height: 80px;
+	height: 100px;
 	text-decoration: none;
 }
 .press-block .press-list .list-item .foto { float: left; padding: 15px 15px 15px 0; }

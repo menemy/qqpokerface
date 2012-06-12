@@ -62,14 +62,15 @@
 	margin: 0 auto;
 }
 .bio-block .page-bg { width: 975px; background: url(bio-bg.png) 70px 39px no-repeat; }
-.bio-block h1.title { margin: 23px 0 73px 0; }
+
 .bio-block div.top-line,
 .bio-block div.bot-line {
 	width: 975px;
 	height: 2px;
-	background: url(wide-line.png) no-repeat;
-	margin: 45px 0px;
+	background: url(wide-line.png) no-repeat; 
 }
+.bio-block div.top-line { margin: 25px 0 45px 0px; }
+.bio-block div.bot-line { margin: 35px 0 25px 0px; }
 
 .bio-block .text-block {
 	height: 550px;

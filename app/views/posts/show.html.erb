@@ -1,10 +1,9 @@
 <div class="news-block page-block">
-    <h1 class="title"><span>NEWS</span><div class="border"></div></h1>
+    <h1 class="title"><span>NEWS</span></h1>
 
     <%= link_to '', url_for( :controller => 'posts', :action => 'index', :locale => I18n.locale ), :class => 'post-back-btn' %>
 
-    <div class="top-line"></div>    
-    
+    <div class="top-line"></div>
     <div class="news-one">
       <div class="foto">
         <% if @post.image_file_name.nil? %>
@@ -21,8 +20,6 @@
         <%= @post.content.html_safe %>
       </span>
     </div>
-
     <div class="bot-line"></div>
-
     <div class="page-bg"></div>
 </div>

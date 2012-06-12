@@ -8,9 +8,11 @@
 .album_item-block div.bot-line {
 	width: 975px;
 	height: 2px;
-	background: url(wide-line.png) no-repeat;
-	margin: 25px 0 40px 0px; 
+	background: url(wide-line.png) no-repeat; 
 }
+.album_item-block div.top-line { margin: 25px 0 35px 0px; }
+.album_item-block div.bot-line { margin: 35px 0 25px 0px; }
+
 .album_item-block .album_item { margin-left: 52px; }
 
 .album_item-block h1.title {
