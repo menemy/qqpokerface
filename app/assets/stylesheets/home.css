@@ -1,7 +1,5 @@
 .index-block .text-block {
-	position: absolute;
-	top: 200px;
-	left: 165px;
+	margin: -10px 0 0 145px;
 
 	width: 270px;
 	color: #fff;	
@@ -9,24 +7,18 @@
 .index-block .text-block h1 {
 	font-family: 'OfficinaSerifCRegularBook';
 	font-size: 24px;
-	font-weight: bold;
+	font-weight: normal;
 	text-transform: uppercase;
 	color: #d7c494;
 }
 .index-block .text-block p {
-	padding: 5px 0px;
-	font: 13px/16px 'OfficinaSerifCRegularBook';
-	font-weight: bold;
-
-	border-bottom: 1px solid #342f26;
-	border-top: 1px solid #342f26;
+	background: url(txt-block.png) no-repeat;
+	width: 280px;
+	height: 170px;
 }
 
 .index-block .social-links { 
-	position: absolute;
-	top: 595px;
-	right: 150px;
-
+	margin: -50px 0 0 1065px;
 	width: 100px;
 	height: 40px;
 }
@@ -41,20 +33,15 @@
 
 .index-block .copyright {
 	display: block;
-	position: absolute;
-
-	top: 640px;
-	right: 180px;
-
+	text-align: right;
+	margin: 5px 0 0 940px;
+	width: 200px;	
 	color: #7e7e7e;
 	font-size: 10px;
 }
 
 .index-block .tweet-block {
-	position: absolute;
-	top: 525px;
-	left: 170px;
-
+	margin: 40px 0 0 145px;
 	width: 325px;
 	height: 130px;
 	
@@ -64,10 +51,7 @@
 
 .index-block .follow-link {
 	display: block;
-	position: absolute;
-	top: 624px;
-	left: 227px;
-
+	margin: -31px 0 0 203px;
 	font: 11px/13px 'OfficinaSerifCRegularBook';
 	color: #fff;
 	text-transform: uppercase;

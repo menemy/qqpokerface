@@ -13,7 +13,7 @@
               <% if album.image_file_name.nil? %>
                 <img width="180" src="<%= asset_path("news-foto.png"); %>" alt="" />
               <% else %>
-                <%= image_tag album.image.url(:thumb) %>
+                <%= image_tag album.image.url(:thumb), :width => 180 %>
               <% end %>
             </div>
             <span class="date"><%= album.date.strftime('%d.%m.%y') %></span>
