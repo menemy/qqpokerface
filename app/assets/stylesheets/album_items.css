@@ -34,17 +34,18 @@
 	text-decoration: none;
 
 	background-color: #1b1b1b;
-	border: 1px solid #3e3e3e;
+	border: 2px solid #3e3e3e;
 }
 .album_items-list .list-item:hover,
 .album_items-list .list-item.hover {
-	opacity: 0.6;
-	-moz-opacity: 0.6;
-	filter:alpha(opacity=6);
+	opacity: 0.9;
+	-moz-opacity: 0.9;
+	filter:alpha(opacity=9);
 
-	background-color: #8d310d;
-	border: 1px solid #8d310d;
+	border: 2px solid #8d310d;
 }
+.album_items-list .list-item:hover .wrapper .date { color: #fff; }
+.album_items-list .list-item:hover .wrapper .title { color: #ff4400; }
 
 .album_items-list .list-item .wrapper { overflow: hidden; height: 180px; }
 .album_items-list .list-item .foto { height: 160px; overflow: hidden; }
