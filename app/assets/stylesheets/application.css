@@ -156,7 +156,7 @@ body {
 .pagination .disabled { display: block; }
 
 /* pagonation linked */
-.pagination-linked { position: relative; top: 15px; left: 50%; text-align: center; width: 300px; margin-left: -170px; }
+.pagination-linked { position: absolute; text-align: center; width: 300px; margin: 408px 0 0 290px; }
 .pagination-linked .disabled { }
 .pagination-linked a { text-decoration: none; }
 .pagination-linked a:hover { color: #ff4400; font-weight: bold; }
@@ -171,3 +171,5 @@ body {
 .social_buttons { margin: 10px 0px; }
 .social_buttons .twitter_button { display: inline-block; width: 90px; position: relative; top: 3px; }
 .social_buttons .fb_button { background: none; }
+
+.notice { position: absolute; margin: 85px 0 0 210px; }

@@ -38,12 +38,13 @@
           <%= link_to t('menu.press'), { :controller => "publications", :action => "index", :locale => I18n.locale } %>
         </li>
         <li class="menu-item last">
-          <%= link_to t('menu.contacts'), { :controller => "home", :action => "index", :locale => I18n.locale }, :class => "no-border" %>
+          <%= link_to t('menu.contacts'), { :controller => "home", :action => "contacts", :locale => I18n.locale }, :class => "no-border" %>
         </li>
       </ul>
     </div>
 
     <% if @notice %><p class="notice"><%= notice %></p><% end %>
+    <% if flash[:notice] %><p class="notice"><%= flash[:notice] %></p><% end %>
 
     <%= yield %>
 

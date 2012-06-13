@@ -1,0 +1,38 @@
+<div class="contacts-block page-block">
+	<h1 class="title"><span>Contacts</span></h1>
+
+	<div class="top-line"></div>	
+	<div class="form-block">
+		
+		<div class="social-links">
+		  <a class="fb" href="#faacebook"></a>
+		  <a class="tw" href="#twitter"></a>
+		</div>
+
+		<%= form_tag(:controller => 'home', :action => 'contacts_mail' ) do %>
+		  <div class="field">
+		    <%= label_tag :uname, "Name" %>
+		    <span class="required">*</span><br />
+		    <%= text_field_tag :uname %>
+		  </div>
+
+		  <div class="field">
+		    <%= label_tag :email, "E-mail" %>
+		    <span class="required">*</span><br />
+		    <%= text_field_tag :email %>
+		  </div>
+		  <div class="field">
+		    <%= label_tag :message, "Message" %>
+		    <span class="required">*</span><br />
+		    <%= text_area_tag :message %>
+		  </div>
+		  <div class="actions">
+		    <%= submit_tag "", :class => "submit" %>
+		  </div>
+		<% end %>
+
+	</div>
+	<div class="bot-line"></div>
+
+	<div class="page-bg"></div>
+</div>

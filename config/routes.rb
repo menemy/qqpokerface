@@ -3,7 +3,9 @@ Qqstudy::Application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
 
   root :to => 'home#index'
-  match '/bio' => 'home#bio'
+  get '/bio' => 'home#bio'
+  get '/contacts' => 'home#contacts'
+  post '/contacts' => 'home#contacts_mail'
 
   match 'dates/:date/' => 'events#build_list'
   
@@ -17,7 +19,9 @@ Qqstudy::Application.routes.draw do
 
   scope "(:locale)", :locale => /en|ru/ do
     root :to => 'home#index'
-    match '/bio' => 'home#bio'
+    get '/bio' => 'home#bio'
+    get '/contacts' => 'home#contacts'
+    post '/contacts' => 'home#contacts_mail'
 
     match 'dates/:date/' => 'events#build_list'
 
