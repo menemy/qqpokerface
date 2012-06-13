@@ -17,16 +17,6 @@ jQuery(function($){
     ticker();
   });
 
-  $.getJSON({
-    url: '/dates.json',
-    dataType: 'json',
-    success: function(events){
-
-
-      
-    }
-  })
-
 $('.events-calendar').datepicker({
           dateFormat: 'yy-mm-dd',
           beforeShowDay: function(date) {
