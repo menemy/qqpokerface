@@ -11,7 +11,7 @@
 	background: url(wide-line.png) no-repeat; 
 }
 .album_items-block div.top-line { margin: 25px 0 35px 0px; }
-.album_items-block div.bot-line { margin: 35px 0 25px 0px; }
+.album_items-block div.bot-line { margin: 0px 0 25px 0px; }
 
 .album_items-block h1.title {
 	margin-bottom: 20px;
@@ -19,7 +19,7 @@
 
 .album_items-block .album_items-list {
 	color: #fff;
-	height: 586px;
+	height: 650px;
 	margin-left: 52px;
 }
 .album_items-list .list-item {
@@ -62,3 +62,4 @@
 	font: 18px Verdana;
 	color: #fff;
 }
+.album_items-block .pagination-linked { top: -4px; }

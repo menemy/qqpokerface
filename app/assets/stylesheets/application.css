@@ -133,7 +133,7 @@ body {
 .pagination .previous_page {
   display: block;
   position: absolute;
-  left: -65px;
+  left: -55px;
 
   width: 35px;
   height: 100px;
@@ -145,7 +145,7 @@ body {
 .pagination .next_page {
   display: block;
   position: absolute;
-  left: 910px;
+  left: 900px;
   
   width: 35px;
   height: 100px;
@@ -153,4 +153,21 @@ body {
   background: url(nav-arrows.png) no-repeat -35px 0;
 }
 .pagination a.next_page:hover { background-position: -35px -100px; }
-.pagination .disabled { display: none; }
+.pagination .disabled { display: block; }
+
+/* pagonation linked */
+.pagination-linked { position: relative; top: 15px; left: 50%; text-align: center; width: 300px; margin-left: -170px; }
+.pagination-linked .disabled { }
+.pagination-linked a { text-decoration: none; }
+.pagination-linked a:hover { color: #ff4400; font-weight: bold; }
+.pagination-linked a, .pagination-linked em, .pagination-linked span {
+  display: inline-block; width: 31px; height: 31px;
+  padding: 4px 0;
+  font: normal 12px Verdana;
+  color: #fff;
+}
+.pagination-linked .current {  background: url(current-bg.png) no-repeat; font: bold 18px Verdana; }
+
+.social_buttons { margin: 10px 0px; }
+.social_buttons .twitter_button { display: inline-block; width: 90px; position: relative; top: 3px; }
+.social_buttons .fb_button { background: none; }

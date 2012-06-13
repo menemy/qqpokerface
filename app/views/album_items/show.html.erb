@@ -13,8 +13,8 @@
     <div class="album_item">
       
       <div class="pagination">
-        <a class="previous_page " rel="previous" href="/en/gallery/poker-party-paris/items?page=2"></a>
-        <a class="next_page" rel="next" href="/en/gallery/poker-party-paris/items?page=2"></a>
+        <a class="previous_page " rel="previous" href="#"></a>
+        <a class="next_page" rel="next" href="#"></a>
       </div>
 
       <div class="wrapper">
@@ -22,5 +22,8 @@
       </div>
     </div>
     <div class="bot-line"></div>
+    
+    <%= social_buttons url_for( :controller => 'album_items', :action => 'show', :id => @album_item, :locale => I18n.locale ) %>
+
     <div class="page-bg"></div>
 </div>

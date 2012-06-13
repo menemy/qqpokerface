@@ -9,7 +9,7 @@
         <% if @post.image_file_name.nil? %>
           <img width="425" src="<%= asset_path("news-foto.png"); %>" alt="" />
         <% else %>
-          <%= image_tag @post.image.url(:medium) %>
+          <%= image_tag @post.image.url(:medium), :width => 425 %>
         <% end %>
       </div>
       
@@ -21,5 +21,8 @@
       </span>
     </div>
     <div class="bot-line"></div>
+
+    <%= social_buttons url_for( :controller => 'posts', :action => 'show', :id => @post, :locale => I18n.locale ) %>
+
     <div class="page-bg"></div>
 </div>

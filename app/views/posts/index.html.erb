@@ -26,6 +26,8 @@
         <% end %>  
       <% end %>
 
+      <%= will_paginate @albums, :previous_label => '<', :next_label => '>', :class => 'pagination-linked' %>
+
       <!-- <%= link_to 'New Post', new_post_path %>-->
     </div>
     <div class="bot-line"></div>
