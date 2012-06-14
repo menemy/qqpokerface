@@ -16,9 +16,9 @@
           <div class="wrapper">
             <div class="foto">
               <% if album_item.image_file_name.nil? %>
-                <img width="185" src="<%= asset_path("news-foto.png"); %>" alt="" />
+                <img height="200" src="<%= asset_path("news-foto.png"); %>" alt="" />
               <% else %>
-                <%= image_tag album_item.image.url(:thumb), :height => 180 %>
+                <%= image_tag album_item.image.url(:thumb), :height => 200 %>
               <% end %>
             </div>
           </div>

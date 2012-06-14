@@ -29,6 +29,8 @@ body {
   padding: 0px;
   overflow-x: hidden;
 }
+img { border: none; }
+a { outline: none; }
 #page {
   width: 1290px;
   height: 100%;
@@ -153,7 +155,7 @@ body {
   background: url(nav-arrows.png) no-repeat -35px 0;
 }
 .pagination a.next_page:hover { background-position: -35px -100px; }
-.pagination .disabled { display: block; }
+.pagination .disabled { display: none; }
 
 /* pagonation linked */
 .pagination-linked { position: absolute; text-align: center; width: 300px; margin: 408px 0 0 290px; }
