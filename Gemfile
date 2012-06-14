@@ -27,6 +27,7 @@ gem 'aws-sdk'
 
 gem "meta_search"
 gem "activeadmin"
+gem "eventmachine", '>= 0.12.10'
 
 gem 'friendly_id'
 gem 'will_paginate'
