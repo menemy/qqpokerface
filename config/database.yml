@@ -18,10 +18,19 @@ test:
   pool: 5
   timeout: 5000
 
+# heroku shared db
+#production:
+#  adapter: postgresql
+#  encoding: unicode
+#  database: osrdtxyeiu
+#  pool: 5
+#  username: osrdtxyeiu
+#  password: lGUHq5QK27zS7e8k1pIw
+
 production:
   adapter: postgresql
   encoding: unicode
-  database: osrdtxyeiu
+  database: oleksiik_poker
   pool: 5
-  username: osrdtxyeiu
-  password: lGUHq5QK27zS7e8k1pIw
+  username: oleksiik_dbuser
+  password: otiuqsom.ipk
